@@ -68,8 +68,8 @@ sudo bash /tmp/installK8S.sh
 to enable network features on worker nodes
 
 sudo modprobe br_netfilter
-sudo echo 1 > /proc/sys/net/bridge/bridge-nf-call-iptables
-sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+sudo echo 1 > tee /proc/sys/net/bridge/bridge-nf-call-iptables
+sudo echo 1 > tee /proc/sys/net/ipv4/ip_forward
 
 
 # Validate 
